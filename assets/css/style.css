@@ -314,8 +314,9 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa toda la pantalla */
+    height: 100vh;
 }
+
 
 .carousel-container h1 {
     margin-bottom: 20px;
@@ -358,6 +359,10 @@ button {
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
+}
+
+button:hover {
+    background-color: rgba(253, 253, 253, 0.014);
 }
 
 #prevBtn {
