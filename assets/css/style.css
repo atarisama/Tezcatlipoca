@@ -149,6 +149,26 @@ nav ul li a:hover {
     margin-top: 0;
 }
 
+.hero .timeRelese{
+    display: flex;
+    flex-direction: column;
+    background: #850000;
+    position: absolute;
+    top: 70px;
+    box-shadow: 6px 6px 6px rgb(3, 3, 3);
+    cursor: default;
+}
+
+.hero .timeRelese h3{
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    text-shadow:1px 1px 1px rgb(3, 3, 3);
+}
+
+
 .hero .buttons {
     position: absolute;
     bottom: 20px;
@@ -167,6 +187,7 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+
 @media screen and (max-width: 900px){
     .hero{
         display: none;
@@ -182,16 +203,34 @@ nav ul li a:hover {
         align-items: center;
         flex-direction: column;
     }
+
+    .hero2 .timeRelese{
+        display: flex;
+        flex-direction: column;
+        background: #850000;
+        position: absolute;
+        top: 70px;
+        box-shadow: 6px 6px 6px rgb(3, 3, 3);
+    }
+
+    .hero2 .timeRelese h3{
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align: center;
+        color: #000000;
+        font-weight: bold;
+        text-shadow:1px 1px 1px rgb(3, 3, 3);
+    }
     
     .hero2 .LogoHero2{
         width:80%;
     }
+
     .hero2 h1{
         position: absolute;
         font-size: 70px;
         text-shadow:6px 3px 3px rgb(3, 3, 3);
     }
-
     .hero2 .buttons{
         bottom: 30px;
         position: absolute;

@@ -53,3 +53,4 @@ prevBtn.addEventListener('click', prevImage);
 
 // Mostrar la primera imagen al cargar la página
 showImage(currentIndex);
+
