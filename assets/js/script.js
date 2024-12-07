@@ -51,6 +51,35 @@ function prevImage() {
 nextBtn.addEventListener('click', nextImage);
 prevBtn.addEventListener('click', prevImage);
 
-// Mostrar la primera imagen al cargar la página
 showImage(currentIndex);
 
+// Configuración de la fecha objetivo
+const targetDate = new Date("October 31, 2025 23:59:59").getTime();
+
+// Actualizar la cuenta regresiva cada segundo
+const countdown = setInterval(() => {
+  const now = new Date().getTime();
+  const timeRemaining = targetDate - now;
+
+  if (timeRemaining <= 0) {
+    clearInterval(countdown);
+    document.body.innerHTML = "<h1>¡El tiempo ha terminado!</h1>";
+    return;
+  }
+
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  // Actualizar los elementos HTML
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+  document.getElementById("days2").textContent = days;
+  document.getElementById("hours2").textContent = hours;
+  document.getElementById("minutes2").textContent = minutes;
+  document.getElementById("seconds2").textContent = seconds;
+}, 1000);
