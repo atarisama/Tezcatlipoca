@@ -54,7 +54,7 @@ prevBtn.addEventListener('click', prevImage);
 showImage(currentIndex);
 
 // Configuración de la fecha objetivo
-const targetDate = new Date("October 31, 2025 23:59:59").getTime();
+const targetDate = new Date("October 31, 2025 00:00:00").getTime();
 
 // Actualizar la cuenta regresiva cada segundo
 const countdown = setInterval(() => {
@@ -63,7 +63,16 @@ const countdown = setInterval(() => {
 
   if (timeRemaining <= 0) {
     clearInterval(countdown);
-    document.body.innerHTML = "<h1>¡El tiempo ha terminado!</h1>";
+
+    // Cambiar el contenido al finalizar el tiempo
+    const timeReleaseElement = document.querySelector(".timeRelese");
+    timeReleaseElement.innerHTML = `
+      <h3>‎ ‎  Ya a la venta  ‎ ‎ </h3>
+    `;
+    const timeReleaseElement2 = document.querySelector(".hero2 .timeRelese");
+    timeReleaseElement2.innerHTML = `
+      <h3>‎ ‎  Ya a la venta  ‎ ‎ </h3>
+    `;
     return;
   }
 
